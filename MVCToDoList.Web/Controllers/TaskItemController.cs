@@ -36,7 +36,7 @@ namespace MVCToDoList.Web.Controllers
             await _context.TaskItems.AddAsync(Task);
             _context.SaveChanges();
 
-            return View();
+            return RedirectToAction("ListAll", "TaskItem");
         }
 
         [HttpGet]
