@@ -30,9 +30,8 @@
                 <td>@taskItem.DueDate</td>
                 <td>@taskItem.IsCompleted</td>
                 <td>
-                    <a>Edit</a>
-                    <a>Delete</a>
-                    <a>Comlpete</a>
+                    <a class="btn btn-primary" asp-controller="TaskItem" asp-action="Edit" asp-route-id="@taskItem.Id">Edit</a>
+                    <a class="btn btn-success" asp-controller="TaskItem" asp-action="Complete" asp-route-id="@taskItem.Id">Comlpete</a>
                 </td>
             </tr>
         }
