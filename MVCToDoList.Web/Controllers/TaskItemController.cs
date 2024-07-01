@@ -91,7 +91,7 @@ namespace MVCToDoList.Web.Controllers
                 await _context.SaveChangesAsync();
             }
 
-            return Redirect("ListCompletedTasks");
+            return Redirect("ListAll");
         }
 
         [HttpGet]
