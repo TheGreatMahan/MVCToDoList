@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<MVCToDoList.Web.Models.Entities.TaskItem>
+
+<h1>All Tasks</h1>
+<h6>Hover over the tasks to see their descriptions</h6>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>GUID Id</th>
+            <th>Title</th>
+            <th>Due Date</th>
+            <th>Is Completed</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var taskItem in Model)
+        {
+            <tr>
+                <td>@taskItem.Id</td>
+                <td>
+                    <span data-bs-toggle="tooltip" data-bs-placement="top" title="@taskItem.Description">@taskItem.Title</span>
+                </td>
+                <td>@taskItem.DueDate</td>
+                <td>@taskItem.IsCompleted</td>
+                <td>
+                    <a>Edit</a>
+                    <a>Delete</a>
+                    <a>Comlpete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
